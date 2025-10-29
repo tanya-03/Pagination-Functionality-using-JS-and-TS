@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Pagination Demo</title>
+    <link rel="stylesheet" href="pagination.css" />
+  </head>
+  <body>
+    <h1>Pagination Functionality</h1>
+    <!-- Box containing data -->
+    <div id="list" class="list"></div>
+
+    <!-- Contains buttons -->
+    <div class="controls">
+      <div class="left">
+        <button id="firstBtn">≪ First</button>
+        <button id="prevBtn">‹ Prev</button>
+
+        <!-- Container for dynamic page number buttons -->
+        <div id="pageButtons" class="page-buttons"></div>
+
+        <button id="nextBtn">Next ›</button>
+        <button id="lastBtn">Last ≫</button>
+      </div>
+
+      <div class="right" style="margin-left: auto">
+        <label class="small" id="pageSizeLabel"
+          >Items per page:
+          <select id="pageSizeSelect" class="page-size">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="20">20</option>
+          </select>
+        </label>
+
+        <div class="jump">
+          <label class="small" id="jumpLabel"
+            >Go to page:
+            <input id="jumpInput" class="inputNum" type="number" min="1" />
+          </label>
+          <button id="jumpBtn">Go</button>
+          <span id="jumpError" class="error"></span>
+        </div>
+      </div>
+    </div>
+    <div class="page-status">
+      <span id="pageNumbers" class="small"></span>
+      <span class="divider">|</span>
+      <span id="pageInfo" class="small"></span>
+    </div>
+
+    <script src="pagination.js"></script>
+  </body>
+</html>
